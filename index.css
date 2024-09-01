@@ -1,0 +1,281 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+}
+
+.subscribe-form-container {
+    background-color: var(--White);
+}
+
+.header {
+    height: 20%;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.form-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+
+}
+
+.form-container {
+    padding: 1em;
+}
+
+.form-heading {
+    font-size: 1.6em;
+    font-family: "Roboto";
+    font-weight: bolder;
+    color: var(--DarkSlateGrey);
+    margin-bottom: 0.5em;
+}
+
+.form-description {
+    font-family: "Roboto";
+    font-weight: 400;
+    color: var(--DarkSlateGrey);
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.benifit-list {
+    list-style-type: none;
+    list-style-image: url("assets/images/icon-list.svg");
+    list-style-position: inside;
+    margin-bottom: 0.5em;
+}
+
+.benifit-item {
+    margin-bottom: 0.62em;
+    font-family: "Roboto";
+    font-size: 0.9em;
+    font-weight: 400;
+    color: var(--DarkSlateGrey)';'
+}
+
+.sign-up-form {
+    padding: 0.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.input-label {
+    font-family: "Roboto";
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+    color: var(--DarkSlateGrey);
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    padding: 1.3em;
+    background-color: transparent;
+    border: 0.1em solid var(--Grey);
+    border-radius: 0.7em;
+    height: 3em;
+    margin-bottom: 3em;
+}
+
+.subscribe-btn {
+    width: 100%;
+    height: 3em;
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 0.5em;
+    transition: all 0.3s;
+
+}
+
+.success-message-container-mobile {
+
+    width: 100%;
+    height: 100%;
+    padding: 2.2em;
+    display: none;
+    background-color:var(--White);
+    border-radius:1em;
+}
+
+.success-icon {
+    width: 5em;
+    margin-bottom: 1.5em;
+
+}
+
+.success-message-heading {
+    font-family: "Roboto";
+    font-size: 2em;
+    font-weight: bolder;
+    color: var(--DarkSlateGrey);
+    margin-bottom: 1em;
+
+}
+
+.success-meassage-description {
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--DarkSlateGrey);
+    margin-bottom: 3em;
+
+}
+
+.dismiss-btn {
+    width: 100%;
+    height: 3em;
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    border-radius: 1em;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    outline: none;
+    cursor: pointer;
+}
+
+.thank-you-message-show {
+    display: block;
+}
+
+.subscribe-btn:hover {
+    background-color: var(--Tomato);
+    box-shadow: var(--Tomato) 0px 5px 15px;
+}
+
+.dismiss-btn:hover {
+    background-color: var(--Tomato);
+    box-shadow: var(--Tomato) 0px 5px 15px;
+}
+
+.hideinDesktop {
+    display:block;
+}
+
+.hideinMobile {
+    display: none;
+}
+/* FORM VALIDATION */
+.error-message{
+    color:var(--Tomato);
+    font-size:1em;
+    font-weight:500;
+    font-family:"Roboto";
+    text-align:right;
+    width:fit-content;
+   
+}
+  
+@media screen and (min-width:768px) {
+    #form {
+        flex-direction: row;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        background-color: var(--DarkSlateGrey);
+        height: 100vh;
+    }
+
+    .hideinDesktop {
+        display: none;
+    }
+
+    .hideinMobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+
+    .subscribe-form-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        width: 60%;
+        padding: 1em;
+        border-radius: 1.2em;
+        border-width: 0px;
+        border-style: solid;
+    }
+
+    .header {
+        width: 50%;
+        height: 100%;
+        order: 2;
+    }
+
+    .form-container {
+        order: 1;
+        width: 50%;
+        height: 100%;
+    }
+
+    .form-heading {
+        font-size: 3em;
+    }
+
+    .form-description {
+        font-size: 1.3em;
+    }
+
+    .benifit-item {
+        font-size: 0.8em;
+    }
+
+    .input-label {
+        font-size: 1em;
+    }
+
+    .input {
+        height: 4.5em;
+        margin-bottom: 3em;
+    }
+.hideForm{
+    display:none;
+}
+.thank-you-message-show {
+    display:block;
+}
+.success-message-container-mobile {
+    font-size:1.5em;
+    width:60%;
+}
+}

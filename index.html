@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" sizes="32x32">
+    <title>Itachi devs | News letter subscribe form</title>
+</head>
+<body>
+    <!-- App container -->
+    <section class="container">
+        <section class="subscribe-form-container" id="form"> <!-- HEADER -->
+            <section class="header">
+                <img src="assets/images/sign-up-image-mobile.svg" alt="sign up form" class="form-image hideinDesktop"
+                >
+                <img src="assets/images/sign-up-image-desktop.svg" alt="sign up form" class="form-image hideinMobile"
+                >
+            </section>
+            <!-- FORM DETAILS -->
+            <section class="form-container">
+                <h1 class="form-heading"> Stay updated!</h1>
+                <p class="form-description"> Join 60,000+ product managers receiving monthly updates on:
+                </p>
+                <ul class="benifit-list">
+                    <li class="benifit-item">
+                        Product discovery and building what matters
+                    </li>
+                    <li class="benifit-item">
+                        Measuring to ensure updates are a success
+                    </li>
+                    <li class="benifit-item"> And much more!
+                    </li>
+                </ul>
+                <!-- Sign-up-form -->
+                <form class="sign-up-form" id="sign-up">
+                    <label for="input" class="input-label">Email Address</label><span id="error-message" class="error-message"></span>
+                    <input type="text" class="input" placeholder="email@company.com" id="input" required>
+                    <button type="submit" class="subscribe-btn" id="subscribe-btn"> Subscribe to monthly newsletter
+                    </button>
+                </form>
+                <!-- Sign-up form end -->
+            </section>
+           </section>
+        <section class="success-message-container-mobile" id="success-meassage">
+            <img src="assets/images/icon-success.svg" alt="sucess icon" class="success-icon">
+            <h1 class="success-message-heading"> Thanks for subscribing!
+            </h1>
+            <p class="success-meassage-description">
+                A confirmation email has been sent to ash@loremcompany.com.
+                Please open it and click the button inside to confirm your subscription.
+            </p>
+            <button class="dismiss-btn" id="dismiss-btn" >
+                Dismiss message
+            </button>
+        </section>
+    </section>
+<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
